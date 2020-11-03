@@ -5,9 +5,9 @@
 ## Concepts
 
 ## Planning
-1. Set up base files and configuration
-2. Create CSV
-3. Pull informatin from CSV
-4. Mobile first design
-5. Integrate Google Civic API
-
+- [x] Set up base files and configuration
+- [ ] Create CSV
+- [ ] Pull informatin from CSV
+- [ ] Mobile first design
+- [ ] Integrate Google Civic API
+- [ ] Add social media share and cards
