@@ -37,5 +37,12 @@ d3.csv('https://raw.githubusercontent.com/marselgray/senate_map/main/data/data.c
 		}
 	}
 
+
+	for(let i = 0; i < states.length; i++){
+		states[i].addEventListener('click', function(){
+			console.log(this.attributes[3].value);
+		})
+	}
+
 });
 
