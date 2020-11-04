@@ -1,5 +1,11 @@
-state,senator_one,senator_two
+state,senator_one,senator_two,color
 AL,R,D
 AK,R,R
 AZ,D,R
 AR,R,R
+CA,D,D
+CO,D,R
+CT,D,D
+DE,D,D
+FL,R,R
+GA,R,R
