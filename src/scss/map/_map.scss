@@ -1,0 +1,26 @@
+.map{
+
+
+	&--state{
+
+	}
+
+	&--red{
+		fill: red;
+	}
+
+	&--blue{
+		fill: blue;
+	}
+
+	&--green{
+
+		&__red{
+			fill: greenyellow
+		}
+
+		&__blue{
+			fill: blueviolet
+		}
+	}
+}
