@@ -35,3 +35,28 @@
 		}
 	}
 }
+
+
+
+.bar{
+
+	margin: 5rem 0;
+	text-align: center;
+
+	&--graph{
+		height: 5rem;
+		width: 80%;
+		margin: 0 auto;
+		position: relative;
+
+		&::before{
+			content: '';
+			height: 100%;
+			width: 0.5rem;
+			background: black;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+	}
+}
