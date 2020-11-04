@@ -1,4 +1,4 @@
-state,senator_one,senator_two,color
+state,senator_one,senator_two
 AL,R,D
 AK,R,R
 AZ,D,R
@@ -9,3 +9,19 @@ CT,D,D
 DE,D,D
 FL,R,R
 GA,R,R
+HI,D,D
+ID,R,R
+IL,D,D
+IN,R,R
+IA,R,R
+KS,R,R
+KY,R,R
+LA,R,R
+ME,R,I
+MD,D,D
+MA,D,D
+MI,D,D
+MN,D,D
+MS,R,R
+MO,R,R
+MT,R,D
