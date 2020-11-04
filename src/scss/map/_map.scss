@@ -2,7 +2,7 @@
 
 
 	&--state{
-
+		cursor: pointer;
 	}
 
 	&--red{
@@ -13,14 +13,18 @@
 		fill: blue;
 	}
 
+	&--purple{
+		fill: purple;
+	}
+
 	&--green{
 
 		&__red{
-			fill: greenyellow
+			fill: greenyellow;
 		}
 
 		&__blue{
-			fill: blueviolet
+			fill: green;
 		}
 	}
 }

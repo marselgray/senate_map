@@ -9,27 +9,27 @@ d3.csv('https://raw.githubusercontent.com/marselgray/senate_map/main/data/data.c
 		// possible outs: 
 		// state is R
 		if(data[i]['senator_one'] === 'R' && data[i]['senator_two'] === 'R'){
-			console.log(data[i]['state'] + ` has two republican senators`);
+			// console.log(data[i]['state'] + ` has two republican senators`);
 			states[i].classList.add('map--red');
 		} 
 		// state is D
 		else if (data[i]['senator_one'] === 'D' && data[i]['senator_two'] === 'D') {
-			console.log(data[i]['state'] + ` has two democratic senators`);
+			// console.log(data[i]['state'] + ` has two democratic senators`);
 			states[i].classList.add('map--blue');
 		} 
 		// state is R and D or state is D and R
 		else if ((data[i]['senator_one'] === 'R' && data[i]['senator_two'] === 'D') || (data[i]['senator_one'] === 'D' && data[i]['senator_two'] === 'R')) {
-			console.log(data[i]['state'] + ` has one democratic and one republic senator`);
+			// console.log(data[i]['state'] + ` has one democratic and one republic senator`);
 			states[i].classList.add('map--purple');
 		} 
 		// state is I and R or state is R and I
 		else if ((data[i]['senator_one'] === 'R' && data[i]['senator_two'] === 'I') || (data[i]['senator_one'] === 'I' && data[i]['senator_two'] === 'R')) {
-			console.log(data[i]['state'] + ` has one independent and one republic senator`);
+			// console.log(data[i]['state'] + ` has one independent and one republic senator`);
 			states[i].classList.add('map--green__red');
 		}
 		// state is I and D or state is D and I
 		else if ((data[i]['senator_one'] === 'D' && data[i]['senator_two'] === 'I') || (data[i]['senator_one'] === 'I' && data[i]['senator_two'] === 'D')) {
-			console.log(data[i]['state'] + ` has one independent and one democratic senator`);
+			// console.log(data[i]['state'] + ` has one independent and one democratic senator`);
 			states[i].classList.add('map--green__blue');
 		}
 		else {
