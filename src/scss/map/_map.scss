@@ -44,10 +44,14 @@
 	text-align: center;
 
 	&--graph{
-		height: 5rem;
+		height: 1.5rem;
 		width: 80%;
 		margin: 0 auto;
 		position: relative;
+
+		@include breakpoint(medium){
+			height: 3rem;
+		}
 
 		&::before{
 			content: '';
