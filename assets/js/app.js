@@ -1,10 +1,9 @@
-console.log('hi');
 
+// grab data from svg
 d3.csv('https://raw.githubusercontent.com/marselgray/senate_map/main/data/data.csv').then(function(data) {
 
 	// grab states
 	var states = document.getElementsByClassName('map--state');
-	console.log(states);
 
 	for(let i = 0; i < data.length; i++){
 		// possible outs: 
@@ -37,8 +36,6 @@ d3.csv('https://raw.githubusercontent.com/marselgray/senate_map/main/data/data.c
 			console.log(data[i]['state'] + `examine this state`);
 		}
 	}
-
-	console.log(data);
 
 });
 
