@@ -66,11 +66,23 @@ d3.csv('https://raw.githubusercontent.com/marselgray/senate_map/main/data/data.c
 	bargraph.style.background = `linear-gradient(to right, red ${rLength}, green ${rLength} ${iLength}, blue ${iLength} 100%)`;
 
 
-	// add event listener to states
+	/*
+	add event listener to state to fetch senator 
+	information from google civic api
+	*/
+	var API_KEY = 'AIzaSyDtSK9ypmcfip8v2gZb8dhJYpIxqgLVwJI';
+	var senators;
 	var arrStates = Array.prototype.slice.call(states);
+
 	arrStates.map(function(item){
 		item.addEventListener('click', function(){
-			console.log(this.attributes[3].value);
+			let address = this.attributes[3].value;
+			var url = `https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&includeOffices=true&levels=country&roles=legislatorLowerBody&roles=legislatorUpperBody&key=${API_KEY}`;
+
+			fetch(url)
+				.then(res => res.json())
+				.then(data => senators = data)
+				.then(() => console.log(senators['officials']))
 		})
 	})
 
