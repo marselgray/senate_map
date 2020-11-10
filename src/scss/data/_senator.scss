@@ -1,0 +1,21 @@
+.senator{
+
+
+	&--heading{
+		text-align: center;
+		font-size: 2.5rem;
+	}
+
+	&--container{
+		display: flex;
+		justify-content: space-evenly;
+		margin: 2rem 0;
+		text-align: center;
+	}
+
+	&--item{
+		font-size: 1.8rem;
+		display: block;
+		margin: 0 0 0.5rem 0;
+	}
+}

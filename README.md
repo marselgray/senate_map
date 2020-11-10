@@ -18,5 +18,18 @@ The bar graph uses array push method to calculate the number of seats held by ea
 - [x] Pull informatin from CSV
 - [x] Mobile first design
 - [x] bar graph to show seats by majority
-- [ ] Integrate Google Civic API
+- [x] Integrate Google Civic API
+- [x] Figure out what infomration from API to show
+- [ ] Skelton replica
+- [ ] Conditionals of click events
 - [ ] Add social media share and cards
+
+
+## API Information
+Senators by State
+Senator Name
+Party
+Photo
+Website
+Twitter
+Phone Number
