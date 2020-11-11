@@ -73,6 +73,8 @@ d3.csv('https://raw.githubusercontent.com/marselgray/senate_map/main/data/data.c
 	var API_KEY = 'AIzaSyDtSK9ypmcfip8v2gZb8dhJYpIxqgLVwJI';
 	var senators;
 	var arrStates = Array.prototype.slice.call(states);
+	let display = document.getElementById('senator--display');
+
 
 	arrStates.map(function(item){
 		item.addEventListener('click', function(){
@@ -82,7 +84,11 @@ d3.csv('https://raw.githubusercontent.com/marselgray/senate_map/main/data/data.c
 			fetch(url)
 				.then(res => res.json())
 				.then(data => senators = data)
-				.then(() => console.log(senators['officials']))
+				.then(function(){
+					for(let i = 0; i < senators['officials'].length; i++){
+						console.log(senators['officials'][i]);
+					}
+				})
 		})
 	})
 
