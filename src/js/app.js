@@ -113,27 +113,33 @@ function loadData(){
 
 							senators['officials'].map(function(sen){
 								console.log(sen);
+			
 								let phoneNumber = sen['phones'][0];
 								phoneNumber = phoneNumber.replace(/\s+/g, '');
+
+								let img = sen['photoUrl'];
+								if (img) {
+									img = img;
+								} else {
+									img = './avatar.jpg'
+								}
 				
 								let senatorInfo = `
 								<div>
 									<p class="senator--item">${sen['name']}</p>
 									<p class="senator--item">${sen['party']}</p>
-									<img class='senator--img' src="${sen['photoUrl']}" alt="Photo of ${sen['name']}" loading="lazy">
+									<img class='senator--img' src="${img}" alt="Photo of ${sen['name']}" loading="lazy">
 									<a href="${sen['urls'][0]}" class="senator--item">Website</a>
 									<a href="https://twitter.com/${sen['channels'][1]['id']}" class="senator--item">Twitter</a>
 									<a href="tel:${phoneNumber}" class="senator--item">DC Office Phone Number</a>
 								</div>
-								`
+								`;
 								document.getElementsByClassName('senator--container')[0].insertAdjacentHTML('beforeend', senatorInfo);
 							})
 						}
-
 					})
 			})
 		})
-
 	});
 }
 

@@ -1,11 +1,22 @@
 .map{
 
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@include breakpoint(medium){
+		flex-direction: row;
+	}
 
 	svg{
 		width: 100%;
 		height: 100%;
 		position: relative;
 		left: -10%;
+
+		@include breakpoint(medium){
+			width: 80%;
+		}
 	}
 
 	&--state{
@@ -14,24 +25,29 @@
 
 	&--red{
 		fill: red;
+		background: red;
 	}
 
 	&--blue{
 		fill: blue;
+		background: blue;
 	}
 
 	&--purple{
 		fill: purple;
+		background: purple;
 	}
 
 	&--green{
 
 		&__red{
 			fill: pink;
+			background: pink;
 		}
 
 		&__blue{
 			fill: lightblue;
+			background: lightblue;
 		}
 	}
 }
@@ -45,7 +61,6 @@
 
 	&--graph{
 		height: 1.5rem;
-		width: 80%;
 		margin: 0 auto;
 		position: relative;
 
@@ -61,6 +76,35 @@
 			position: absolute;
 			left: 50%;
 			transform: translate(-50%, 0);
+		}
+	}
+}
+
+
+
+.legend{
+	display: flex;
+	flex-direction: column;
+	margin: 5rem 0 0 0;
+
+	@include breakpoint(medium){
+		margin: 0;
+		width: 20%;
+		justify-content: center;
+	}
+
+	&--key{
+		display: flex;
+		margin: 0 0 1rem 0;
+
+		&__color{
+			width: 2rem;
+			height: 2rem;
+			margin: 0 1rem 0 0;
+		}
+
+		&__text{
+			font-size: 1.5rem;
 		}
 	}
 }
