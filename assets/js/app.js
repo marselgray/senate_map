@@ -93,6 +93,10 @@ function loadData(){
 						for(let i = 0; i < senators['officials'].length; i++){
 							console.log(senators['officials'][i]);
 						}
+
+						let title = `<h3 class="senator--heading">The Senators for ${address}:</h3>`;
+
+						display.insertAdjacentHTML('afterbegin', title)
 					})
 			})
 		})
