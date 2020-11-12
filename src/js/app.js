@@ -120,7 +120,7 @@ function loadData(){
 								<div>
 									<p class="senator--item">${sen['name']}</p>
 									<p class="senator--item">${sen['party']}</p>
-									<img class='senator--img' src="${sen['photoUrl']}" alt="Photo of ${sen['name']}">
+									<img class='senator--img' src="${sen['photoUrl']}" alt="Photo of ${sen['name']}" loading="lazy">
 									<a href="${sen['urls'][0]}" class="senator--item">Website</a>
 									<a href="https://twitter.com/${sen['channels'][1]['id']}" class="senator--item">Twitter</a>
 									<a href="tel:${phoneNumber}" class="senator--item">DC Office Phone Number</a>
