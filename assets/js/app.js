@@ -75,9 +75,7 @@ function loadData(){
 		add event listener to state to fetch senator 
 		information from google civic api
 		*/
-		var API_KEY = 'AIzaSyDkh925ZIYxRb42ergk3mB-CYDpJZJBPX4';
-		// local key:
-		// var API_KEY = 'AIzaSyDtSK9ypmcfip8v2gZb8dhJYpIxqgLVwJI';
+		var API_KEY = 'AIzaSyDtSK9ypmcfip8v2gZb8dhJYpIxqgLVwJI';
 		var senators;
 		var arrStates = Array.prototype.slice.call(states);
 
