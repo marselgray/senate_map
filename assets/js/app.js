@@ -112,14 +112,20 @@ function loadData(){
 							display.insertAdjacentHTML('afterbegin', title);
 
 							senators['officials'].map(function(sen){
-								console.log(sen);
+								// console.log(sen);
 			
 								let phoneNumber = sen['phones'][0];
 								phoneNumber = phoneNumber.replace(/\s+/g, '');
 
 								let img = sen['photoUrl'];
+								// google civic serves images as http, so pull from congress link if its from the bio guides
 								if (img) {
-									img = img;
+									if (img.slice(0,15) === 'http://bioguide'){
+										let bioID = img.slice(46,53);
+										img = `https://theunitedstates.io/images/congress/225x275/${bioID}.jpg`
+									} else {
+										img = img;
+									}
 								} else {
 									img = './avatar.jpg'
 								}
