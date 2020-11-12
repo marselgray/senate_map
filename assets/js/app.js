@@ -92,9 +92,6 @@ function loadData(){
 					.then(res => res.json())
 					.then(data => senators = data)
 					.then(function(){
-						for(let i = 0; i < senators['officials'].length; i++){
-							console.log(senators['officials'][i]);
-						}
 
 						if(display){
 							display.remove();
@@ -107,8 +104,30 @@ function loadData(){
 
 						function addInformation(){
 							display = document.getElementById('senator--display');
-							let title = `<h3 class="senator--heading">The Senators for ${address}:</h3>`;
-							display.insertAdjacentHTML('afterbegin', title)
+							let title = `
+								<h3 class="senator--heading">
+									The Senators for ${address}:
+								</h3>
+								<div class="senator--container"></div>`;
+							display.insertAdjacentHTML('afterbegin', title);
+
+							senators['officials'].map(function(sen){
+								console.log(sen);
+								let phoneNumber = sen['phones'][0];
+								phoneNumber = phoneNumber.replace(/\s+/g, '');
+				
+								let senatorInfo = `
+								<div>
+									<p class="senator--item">${sen['name']}</p>
+									<p class="senator--item">${sen['party']}</p>
+									<img class='senator--img' src="${sen['photoUrl']}" alt="Photo of ${sen['name']}">
+									<a href="${sen['urls'][0]}" class="senator--item">Website</a>
+									<a href="https://twitter.com/${sen['channels'][1]['id']}" class="senator--item">Twitter</a>
+									<a href="tel:${phoneNumber}" class="senator--item">DC Office Phone Number</a>
+								</div>
+								`
+								document.getElementsByClassName('senator--container')[0].insertAdjacentHTML('beforeend', senatorInfo);
+							})
 						}
 
 					})
