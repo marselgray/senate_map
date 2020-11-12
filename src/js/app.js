@@ -78,11 +78,13 @@ function loadData(){
 		var API_KEY = 'AIzaSyDtSK9ypmcfip8v2gZb8dhJYpIxqgLVwJI';
 		var senators;
 		var arrStates = Array.prototype.slice.call(states);
-		let display = document.getElementById('senator--display');
 
 
 		arrStates.map(function(item){
 			item.addEventListener('click', function(){
+
+				let display = document.getElementById('senator--display');
+
 				let address = this.attributes[3].value;
 				var url = `https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&includeOffices=true&levels=country&roles=legislatorLowerBody&roles=legislatorUpperBody&key=${API_KEY}`;
 
@@ -94,9 +96,21 @@ function loadData(){
 							console.log(senators['officials'][i]);
 						}
 
-						let title = `<h3 class="senator--heading">The Senators for ${address}:</h3>`;
+						if(display){
+							display.remove();
+							document.getElementById('bar').insertAdjacentHTML('afterend', `<section id='senator--display' class="sentor"></section>`);
+							addInformation();
+						} else {
+							addInformation();
+						}
 
-						display.insertAdjacentHTML('afterbegin', title)
+
+						function addInformation(){
+							display = document.getElementById('senator--display');
+							let title = `<h3 class="senator--heading">The Senators for ${address}:</h3>`;
+							display.insertAdjacentHTML('afterbegin', title)
+						}
+
 					})
 			})
 		})
