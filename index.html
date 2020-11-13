@@ -3,6 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="US Senate Map by Political Party Affiliation">
+	<meta name="keywords" content="us senate map">
+
+	<meta itemprop='keywords' name='keywords' content="great pacific garbage patch">
+	<meta itemprop="description" name="description" content="US Senate Map by Political Party Affiliation">
+
+	<!-- Facebook meta data -->
+	<meta property="og:title" content="US Senate Map by Political Party Affiliation">
+	<meta property="og:type" content="article">
+	<meta property="og:description" content="US Senate Map using D3.js and Google Civic API">
+	<meta property="og:image:secure_url" content="https://marselgray.github.io/senate_map/us_senate.jpg">
+	<meta property="og:url" content="https://marselgray.github.io/senate_map/index.htm">
+	<meta property="og:site_name" content="US Senate Map by Political Party Affiliation">
+
+	<!-- Twitter meta data -->
+	<meta property="twitter:title" content="US Senate Map by Political Party Affiliation">
+	<meta property="twitter:description" content="US Senate Map using D3.js and Google Civic API">
+	<meta property="twitter:image" content="https://marselgray.github.io/senate_map/us_senate.jpg">
+	<meta property="twitter:url" content="https://marselgray.github.io/senate_map/index.htm">
+	<meta name="twitter:card" content="summary_large_image">
+
 	<link rel="stylesheet" href="./assets/css/main.css">
 	
 	<title>Senate Map</title>
@@ -15,14 +37,14 @@
 			<h1 class="intro--heading"> 
 				<span class="intro--red">Red</span> Sock, <span class="intro--blue">Blue</span> Sock</h1>
 			<p class="intro--text">
-				This map shows the make up of the US Senate by political party affilation.
 				The composition and powers of the Senate are established by Article One of the United States Constitution.
 				The Senate is composed of senators, each of whom represents a single state in its entirety. 
 				Each state, regardless of its population size, is equally represented by two senators who serve staggered terms of six years.
-
 				<br><br>
-
-				You can click a state to find out who your senators are and their contact information.
+				This map shows the make up of the US Senate by political party affiliation. The bar graph shows party Affiliation in relation
+				to amount need for a majority.
+				<br><br>
+				You can click a state to find out whom the senators for that state are and their contact information. Information is provided by the Google Civic API.
 			</p>
 		</section>
 
@@ -541,7 +563,12 @@
 	</main>
 
 	<footer class="footer">
-
+		<p class="footer--text">Share This Page</p>
+		<div class="footer--buttons" data-source="simplesharingbuttons.com">
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarselgray.github.io%2Fsenate_map%2F&quote=US%20Senate%20Map%20by%20Political%20Party%20Affiliation" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="./images/simple_icons_black/Facebook.png" /></a>
+			<a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmarselgray.github.io%2Fsenate_map%2F&text=US%20Senate%20Map%20by%20Political%20Party%20Affiliation:%20https%3A%2F%2Fmarselgray.github.io%2Fsenate_map%2F" target="_blank" title="Tweet"><img alt="Tweet" src="./images/simple_icons_black/Twitter.png" /></a>
+			<a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarselgray.github.io%2Fsenate_map%2F&title=US%20Senate%20Map%20by%20Political%20Party%20Affiliation&summary=US%20Senate%20Map%20using%20D3.js%20and%20Google%20Civic%20API&source=https%3A%2F%2Fmarselgray.github.io%2Fsenate_map%2F" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="./images/simple_icons_black/LinkedIn.png" /></a>
+		</div>
 	</footer>
 
 	<script src="https://d3js.org/d3.v5.min.js"></script>

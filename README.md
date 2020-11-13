@@ -26,7 +26,7 @@ Clicking on each state pulls that state's senators and information provided by G
 - [x] Skelton replica
 - [x] Conditionals of click events
 - [x] Fix image conditions if none and https error
-- [ ] Add social media share and cards
+- [x] Add social media share and cards
 
 
 ## API Information

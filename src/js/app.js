@@ -84,7 +84,6 @@ function loadData(){
 			item.addEventListener('click', function(){
 
 				let display = document.getElementById('senator--display');
-
 				let address = this.attributes[3].value;
 				var url = `https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&includeOffices=true&levels=country&roles=legislatorLowerBody&roles=legislatorUpperBody&key=${API_KEY}`;
 
@@ -102,6 +101,7 @@ function loadData(){
 						}
 
 
+						// displays senator information
 						function addInformation(){
 							display = document.getElementById('senator--display');
 							let title = `
@@ -118,7 +118,11 @@ function loadData(){
 								phoneNumber = phoneNumber.replace(/\s+/g, '');
 
 								let img = sen['photoUrl'];
-								// google civic serves images as http, so pull from congress link if its from the bio guides
+								/* 
+								google civic serves images as http
+								so pull from congress link if its from the bio guides
+								nor do all senators have photos on the api apparently
+								*/
 								if (img) {
 									if (img.slice(0,15) === 'http://bioguide'){
 										let bioID = img.slice(46,53);
