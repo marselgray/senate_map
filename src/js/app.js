@@ -131,7 +131,7 @@ function loadData(){
 										img = img;
 									}
 								} else {
-									img = './avatar.jpg'
+									img = './images/site_images/avatar.jpg'
 								}
 				
 								let senatorInfo = `
