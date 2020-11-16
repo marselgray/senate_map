@@ -30,10 +30,10 @@ Clicking on each state pulls that state's senators and information provided by G
 
 
 ## API Information
-Senators by State
-Senator Name
-Party
-Photo
-Website
-Twitter
-Phone Number
+1. Senators by State
+2. Senator Name
+3. Party
+4. Photo
+5. Website
+6. Twitter
+7. Phone Number
