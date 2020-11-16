@@ -94,7 +94,7 @@ function loadData(){
 
 						if(display){
 							display.remove();
-							document.getElementById('bar').insertAdjacentHTML('afterend', `<section id='senator--display' class="sentor"></section>`);
+							document.getElementById('intro').insertAdjacentHTML('afterend', `<section id='senator--display' class="sentor"></section>`);
 							addInformation();
 						} else {
 							addInformation();
