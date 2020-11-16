@@ -134,15 +134,27 @@ function loadData(){
 								} else {
 									img = './images/site_images/avatar.jpg'
 								}
+
+								let color;
+								switch(sen['party']){
+									case 'Republican Party':
+										color = 'intro--red';
+										break;
+									case 'Democratic Party':
+										color = 'intro--blue';
+										break;
+									default:
+										color = 'intro--other';
+								}
 				
 								let senatorInfo = `
 								<div>
 									<p class="senator--item">${sen['name']}</p>
-									<p class="senator--item">${sen['party']}</p>
+									<p class="senator--item ${color}">${sen['party']}</p>
 									<img class='senator--img' src="${img}" alt="Photo of ${sen['name']}" loading="lazy">
 									<a href="${sen['urls'][0]}" class="senator--item" target="_blank" rel="noreferrer noopener" aria-label="This is an external link (opens in a new tab)">Website</a>
 									<a href="https://twitter.com/${sen['channels'][1]['id']}" class="senator--item" target="_blank" rel="noreferrer noopener" aria-label="This is an external link (opens in a new tab)">Twitter</a>
-									<a href="tel:${phoneNumber}" class="senator--item">DC Office Phone Number</a>
+									<a href="tel:1-${phoneNumber}" class="senator--item">DC Office Phone Number</a>
 								</div>
 								`;
 								document.getElementsByClassName('senator--container')[0].insertAdjacentHTML('beforeend', senatorInfo);
