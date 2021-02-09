@@ -1,14 +1,14 @@
 state,senator_one,senator_two
 AK,R,R
-AL,R,D
+AL,R,R
 AR,R,R
-AZ,D,R
+AZ,D,D
 CA,D,D
-CO,D,R
+CO,D,D
 CT,D,D
 DE,D,D
 FL,R,R
-GA,R,R
+GA,D,D
 HI,D,D
 IA,R,R
 ID,R,R
@@ -22,7 +22,7 @@ MA,D,D
 MY,D,D
 MI,D,D
 MN,D,D
-MO,R,R
+MO,R,D
 MS,R,R
 MT,D,R
 NC,R,R
